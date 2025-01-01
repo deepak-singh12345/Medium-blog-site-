@@ -8,7 +8,6 @@ import User from '../models/userModel';
 const router = express.Router();
 
 import userRouter from './userRouter';
-import adminRouter from './adminRouter';
 
 router.post('/signup', async(req:Request, res:Response):Promise<any> =>{
     try {
@@ -93,7 +92,6 @@ router.get('/login', async(req:Request, res:Response):Promise<any> => {
 })
 
 router.use('/', userRouter);
-router.use('/admin', adminRouter);
 
 
 export default router;

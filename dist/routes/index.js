@@ -57,7 +57,7 @@ router.get('/login', (req, res) => __awaiter(void 0, void 0, void 0, function* (
     try {
         const { email, userName, password } = req.body;
         if (!password || (!email && !userName)) {
-            return res.status(400).json({ message: "Eamil or username and password are required" });
+            return res.status(400).json({ message: "Email or username and password are required" });
         }
         const user = yield userModel_1.default.findOne({
             $or: [{ email }, { userName }]

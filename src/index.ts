@@ -3,6 +3,7 @@ require('dotenv').config()
 
 import connectDB from "./utils/db";
 import router from './routes';
+import adminRouter from './routes/adminRouter';
 
 
 
@@ -15,6 +16,7 @@ connectDB();
 
 
 app.use('/api/v1', router);
+app.use('/adminPanel', adminRouter)
 
 
 app.listen(PORT, () => {

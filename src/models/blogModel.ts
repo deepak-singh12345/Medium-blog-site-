@@ -18,6 +18,7 @@ const blogSchema: Schema<IBlog> = new Schema(
       title: {
         type: String,
         required: true,
+        unique:true,
         minlength: 5,
         maxlength: 128,
       },
