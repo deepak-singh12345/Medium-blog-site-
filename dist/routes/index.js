@@ -18,7 +18,6 @@ const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const userModel_1 = __importDefault(require("../models/userModel"));
 const router = express_1.default.Router();
 const userRouter_1 = __importDefault(require("./userRouter"));
-const adminRouter_1 = __importDefault(require("./adminRouter"));
 router.post('/signup', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { firstName, lastName, userName, email, password } = req.body;
@@ -88,5 +87,4 @@ router.get('/login', (req, res) => __awaiter(void 0, void 0, void 0, function* (
     }
 }));
 router.use('/', userRouter_1.default);
-router.use('/admin', adminRouter_1.default);
 exports.default = router;
